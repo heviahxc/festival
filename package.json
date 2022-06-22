@@ -1,0 +1,29 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, SASS y HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "css" : "gulp css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heviahxc/festival.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Felipe Hevia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heviahxc/festival/issues"
+  },
+  "homepage": "https://github.com/heviahxc/festival#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.52.3"
+  }
+}
