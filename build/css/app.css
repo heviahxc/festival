@@ -317,6 +317,7 @@ body {
 p {
   font-size: 2rem;
   color: #000000;
+  line-height: 1.5;
 }
 
 .container {
@@ -343,6 +344,11 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .header {
@@ -388,4 +394,78 @@ h3 {
 }
 .major-navigation a:hover {
   color: #E2DF15;
+}
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  min-width: 50rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  background: rgb(147, 47, 203);
+  background: linear-gradient(270deg, rgba(147, 47, 203, 0.5217437317) 0%, rgba(237, 32, 120, 0.4937325272) 44%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.video video {
+  width: auto;
+  display: block;
+}
+@media (min-width: 992px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contents-video {
+  z-index: 10;
+}
+.contents-video h2 {
+  color: #ffffff;
+  font-size: 7rem;
+  margin: 0;
+}
+.contents-video p {
+  background-color: #CC094E;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.on-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .on-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.container-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .container-festival {
+    margin-top: 0;
+  }
+}
+.container-festival h2 {
+  margin-bottom: 2rem;
+}
+.container-festival .date {
+  color: #CC094E;
+  font-weight: 700;
 }
