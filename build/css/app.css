@@ -354,7 +354,7 @@ img {
 }
 
 .header {
-  background-color: #056E68;
+  background-color: #0f8b85;
 }
 .header h1 {
   color: #ffffff;
@@ -470,4 +470,76 @@ img {
 .container-festival .date {
   color: #CC094E;
   font-weight: 700;
+}
+
+.lineup {
+  background-color: #CC094E;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #ffffff;
+}
+.lineup .day {
+  text-transform: uppercase;
+  margin-bottom: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .scenary-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5;
+  }
+}
+.scenary-container p {
+  color: #000000;
+}
+
+.scenary {
+  padding-top: 2rem;
+}
+.scenary .name-scenary::after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .name-scenary:after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.rock .name-scenary:after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.calendar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendar li {
+  padding: 2.5rem;
+}
+.calendar li span {
+  font-weight: 400;
+}
+
+.bg-yellow {
+  background-color: #E2DF15;
+}
+.bg-yellow li:nth-child(odd) {
+  background-color: #9c9a0e;
+}
+
+.bg-green {
+  background-color: #0f8b85;
+}
+.bg-green li:nth-child(odd) {
+  background-color: #0a5d59;
 }
