@@ -2,18 +2,30 @@ const { src, dest, watch, parallel} = require("gulp");
 //css
 const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const sourcermaps = require('gulp-sourcemaps');
 //imagenes
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const avif = require('gulp-avif');
 
+//JavaScript
+
+const terser = require('gulp-terser-js');
+
+
 
 function css ( done ){
 
     src('src/scss/**/*.scss')
+        .pipe(sourcermaps.init())
         .pipe( plumber() ) // Identifica el archivo SASS
-        .pipe( sass() )            // Compilar
+        .pipe( sass() )
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcermaps.write('.'))            // Compilar
         .pipe( dest('build/css') );// Guarda en el disco duro
 
 
@@ -61,6 +73,9 @@ function imagenes(done){
 
 function javascript(done){
     src('src/js/**/*.js')
+        .pipe(sourcermaps.init())
+        .pipe(terser())
+        .pipe(sourcermaps.write('.'))
         .pipe(dest('build/js'));
 
     done();
